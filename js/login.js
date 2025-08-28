@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const username = document.getElementById('username').value.trim();
         const fullname = document.getElementById('fullname').value.trim();
         
+        // Kiểm tra độ dài username (tối thiểu 3 ký tự)
+        if (username.length < 3) {
+            alert('Username phải từ 3 ký tự!');
+            return;
+        }
+        
         // Kiểm tra điều kiện chuyển hướng
         if (username === 'LanAnhT02' && fullname === 'Lan Anh') {
             // Lưu thông tin vào localStorage
