@@ -1,11 +1,5 @@
 // gui2.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Kiểm tra device type - nếu là mobile thì redirect
-    if (isMobileDevice()) {
-        window.location.href = 'gui1.html';
-        return;
-    }
-
     // Hiển thị thông tin người dùng
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (currentUser) {
@@ -52,11 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 itemsList.appendChild(itemElement);
             });
         }
-    }
-
-    // Hàm kiểm tra thiết bị desktop
-    function isMobileDevice() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
 
     // Tự động cập nhật khi có dữ liệu mới (có thể thêm nếu cần)

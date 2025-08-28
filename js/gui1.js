@@ -7,12 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
             `Xin chào ${currentUser.fullname} (${currentUser.username})`;
     }
 
-    // Kiểm tra device type - nếu không phải mobile thì redirect
-    if (!isMobileDevice()) {
-        window.location.href = 'gui2.html';
-        return;
-    }
-
     // Logic kéo thả
     const draggables = document.querySelectorAll('.draggable');
     const dropZone = document.getElementById('dropZone');
@@ -94,9 +88,4 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Vui lòng kéo ít nhất 1 đối tượng vào khu vực thả!');
         }
     });
-
-    // Hàm kiểm tra thiết bị mobile
-    function isMobileDevice() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
 });
